@@ -1,12 +1,11 @@
 pub fn square_of_sum(n: usize) -> usize {
-    let mut numbers = vec![];
+    let mut numbers = 0;
 
     for i in 0..n + 1 {
-        numbers.push(i);
+        numbers += i;
     }
 
-    let sum: usize = numbers.iter().sum();
-    return sum.pow(2);
+    return numbers.pow(2);
 }
 
 pub fn sum_of_squares(n: usize) -> usize {

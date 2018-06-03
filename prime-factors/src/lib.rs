@@ -9,7 +9,7 @@ pub fn factors(n: u64) -> Vec<u64> {
         if is_prime(number) && n % number == 0 {
             results.push(number);
             let remainder = n / number;
-            let mut factors = factors(remainder);
+            let mut factors: Vec<u64> = factors(remainder);
             results.append(&mut factors);
             break;
         }
